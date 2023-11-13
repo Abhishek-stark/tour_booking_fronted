@@ -24,6 +24,7 @@ const Tourpage = () => {
       if (response.data) {
         settour(response.data.tours);
       }
+
       // https://apifortour.onrender.com/
 
       // http://localhost:8000/api/v1/tours

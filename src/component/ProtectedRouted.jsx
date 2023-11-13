@@ -1,6 +1,5 @@
 import { React, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-
 const ProtectedRouted = (props) => {
   const { Component } = props;
   const user = localStorage.getItem('user');

@@ -1,6 +1,6 @@
 import { React, useState, useEffect } from 'react';
 import { Navigate, useLocation, useNavigate } from 'react-router-dom';
-import './tourdetail.css';
+import './style.css';
 import GradeIcon from '@mui/icons-material/Grade';
 import { loadStripe } from '@stripe/stripe-js';
 

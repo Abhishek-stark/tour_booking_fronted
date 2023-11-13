@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // import { ToastContainer } from 'react-toastify'
 // import 'react-toastify/dist/ReactToastify.css'
 // import Header from './components/Header';
+import TourPageN from './component/TourPageN';
 import Dashboard from './component/Dashboard';
 import Login from './component/Login';
 import Register from './component/Register';
@@ -11,10 +12,12 @@ import Tourpage from './component/Tourpage';
 import axios from 'axios';
 import Tourdetailpage from './component/Tourdetailpage';
 import Passwordsetting from './component/Passwordsetting';
-
+import Logins from './component/Logins';
+import RegisterN from './component/RegisterN';
 import ProtectedRouted from './component/ProtectedRouted';
 import Nopage from './component/Nopage';
 import AdminPage from './component/AdminPage';
+import TourDetailsN from './component/TourDetailsN';
 axios.defaults.withCredentials = true;
 
 function App() {
@@ -39,14 +42,14 @@ function App() {
             <Route
               path="/login"
               exact
-              element={<ProtectedRouted Component={Login} />}
+              element={<ProtectedRouted Component={Logins} />}
             />
             <Route
               path="/admin"
               exact
               element={<ProtectedRouted Component={AdminPage} />}
             />
-            <Route path="/" exact element={<Tourpage />} />
+            <Route path="/" exact element={<TourPageN />} />
             <Route
               path="/useraccount"
               exact
@@ -56,13 +59,13 @@ function App() {
             <Route
               path="/register"
               exact
-              element={<Register />}
+              element={<RegisterN />}
               //  element={<Register />}
             />
             <Route
               path="/tourdetail"
               exact
-              element={<ProtectedRouted Component={Tourdetailpage} />}
+              element={<ProtectedRouted Component={TourDetailsN} />}
               // element={<Tourdetailpage />}
             />
             <Route path="/*" element={<Nopage />} />
